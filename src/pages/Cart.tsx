@@ -4,7 +4,7 @@ import items from "../data/items.json";
 import { shopContext } from "../context/shopContext";
 
 const Cart = () => {
-  const { cartItems } = useContext(shopContext);
+  const { cartItems, getTotalAmount } = useContext(shopContext);
 
   return (
     <div className="cart">
@@ -23,6 +23,12 @@ const Cart = () => {
               />
             )
         )}
+      </div>
+      <div className="cart-actions">
+        <h2 className="total-price">Total Amount: £ {getTotalAmount()}</h2>
+        <button className="checkout-btn" type="button">
+          Checkout
+        </button>
       </div>
     </div>
   );

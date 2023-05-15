@@ -8,6 +8,7 @@ interface Props {
 interface ShopContext {
   addToCart: (itemId: number) => void;
   removeFromCart: (itemId: number) => void;
+  getTotalAmount: () => number;
   cartItems: Record<number, number>;
 }
 
@@ -34,7 +35,23 @@ const ShopContextProvider = ({ children }: Props) => {
     setCartItems((prev) => ({ ...prev, [itemId]: prev[itemId] - 1 }));
   };
 
-  const contextValue = { addToCart, removeFromCart, cartItems };
+  const getTotalAmount = () => {
+    let totalAmount = 0;
+
+    for (const item in cartItems) {
+      if (cartItems[item] > 0) {
+        let itemPrice = items.find(
+          (storeItem) => storeItem.id === Number(item)
+        )?.price;
+
+        if (itemPrice) totalAmount += cartItems[item] * itemPrice;
+      }
+    }
+
+    return totalAmount;
+  };
+
+  const contextValue = { addToCart, removeFromCart, cartItems, getTotalAmount };
   return (
     <shopContext.Provider value={contextValue}>{children}</shopContext.Provider>
   );
