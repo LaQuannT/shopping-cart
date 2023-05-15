@@ -104,3 +104,32 @@ img {
   padding: 6px 12px;
   background-color: transparent;
 }
+
+.cart-container {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  align-items: center;
+}
+
+.item-card {
+  display: flex;
+  gap: 6px;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 1px 1px 8px gray;
+  width: 400px;
+  padding: 10px 16px;
+}
+
+.cart-item-img {
+  max-width: 150px;
+  max-height: 150px;
+}
+
+.item-details {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 8px;
+}
