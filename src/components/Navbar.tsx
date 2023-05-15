@@ -14,7 +14,11 @@ const Navbar = () => {
         <Link className="link" to={"/shop"}>
           Shop
         </Link>
-        <button className="btn-cart">cart (0)</button>
+        <button className="btn-cart">
+          <Link className="link" to={"/cart"}>
+            Cart
+          </Link>
+        </button>
       </div>
     </nav>
   );
