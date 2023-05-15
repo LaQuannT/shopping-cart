@@ -9,10 +9,8 @@ const Navbar = () => {
       </h1>
 
       <div className="nav-links">
-        <p className="shop-link">
-          <Link to={"/shop"}>Shop</Link>
-          <button className="btn-cart">cart (0)</button>
-        </p>
+        <Link to={"/shop"}>Shop</Link>
+        <button className="btn-cart">cart (0)</button>
       </div>
     </nav>
   );
