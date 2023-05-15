@@ -5,7 +5,7 @@ import ProductCard from "../components/ProductCard";
 const Shop = () => {
   return (
     <div className="shop">
-      <h1 className="shop-title">Shop</h1>
+      <h1 className="title">Shop</h1>
 
       <div className="products">
         {items.map((item) => {

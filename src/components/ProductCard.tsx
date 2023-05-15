@@ -17,7 +17,9 @@ const ProductCard = ({ id, productName, price, productURL }: Props) => {
         <p>{productName}</p>
         <p>£{price}</p>
       </div>
-      <button className="btn-add-cart">Add To Cart</button>
+      <div className="product-actions">
+        <button className="btn-add-cart">Add To Cart</button>
+      </div>
     </div>
   );
 };
