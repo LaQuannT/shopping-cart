@@ -133,3 +133,24 @@ img {
   justify-content: center;
   gap: 8px;
 }
+
+.cart-actions {
+  text-align: right;
+  margin: 2rem;
+}
+
+.total-price {
+  padding: 16px 0;
+}
+
+.checkout-btn {
+  width: 200px;
+  height: 50px;
+  background-color: lightgreen;
+  font-size: 1.2rem;
+}
+
+.item-add-remove {
+  display: flex;
+  gap: 10px;
+}

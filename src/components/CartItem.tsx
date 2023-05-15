@@ -22,7 +22,7 @@ const CartItem = ({ id, productName, price, productURL }: Props) => {
         </div>
         <div className="item-actions">
           {cartItems[id] > 1 ? (
-            <>
+            <div className="item-add-remove">
               <button
                 type="button"
                 className="add-btn"
@@ -42,7 +42,7 @@ const CartItem = ({ id, productName, price, productURL }: Props) => {
               >
                 -
               </button>
-            </>
+            </div>
           ) : (
             <button
               className="btn-remove"
